@@ -1,8 +1,8 @@
 FROM php:5.6.37-cli-alpine3.7
 
 RUN set -ex \
-	&& apk --no-cache add mysql-client postgresql-libs postgresql-dev \
-	&& docker-php-ext-install pdo pdo_mysql mysqli pgsql pdo_pgsql mcrypt php-xml\
+	&& apk --no-cache add mysql-client postgresql-libs postgresql-dev php5-xml \
+	&& docker-php-ext-install pdo pdo_mysql mysqli pgsql pdo_pgsql mcrypt \
 	&& apk del postgresql-dev
 # Install mysql and cron
 #RUN apk update && apk add build-base
