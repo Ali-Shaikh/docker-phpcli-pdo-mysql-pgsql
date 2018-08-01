@@ -1,4 +1,4 @@
-FROM php:5.6.37-cli-alpine3.7
+FROM php:7-cli-alpine3.7
 
 RUN set -ex \
 	&& apk --no-cache add mysql-client postgresql-libs postgresql-dev php5-xml \
