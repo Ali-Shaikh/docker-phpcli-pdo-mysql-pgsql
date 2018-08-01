@@ -1,7 +1,7 @@
 FROM php:7-cli-alpine3.7
 
 RUN set -ex \
-	&& apk --no-cache add mysql-client postgresql-libs postgresql-dev php5-xml \
+	&& apk --no-cache add mysql-client postgresql-libs postgresql-dev php5-xml poppler-utils\
 	&& docker-php-ext-install pdo pdo_mysql mysqli pgsql pdo_pgsql \
 	&& apk del postgresql-dev
 RUN apk add --no-cache --repository http://dl-3.alpinelinux.org/alpine/edge/testing gnu-libiconv
